@@ -21,7 +21,7 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build . --tag cr.yandex/crpiav879qko4h8plsue/diplom-repository:${{ github.ref_name }} &&
+        docker build . --tag cr.yandex/crpiav879qko4h8plsue/diplom-repository:${{ github.ref_name }} --provenance=false --sbom=false &&
         docker push cr.yandex/crpiav879qko4h8plsue/diplom-repository:${{ github.ref_name }}
 
   deploy:
