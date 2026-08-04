@@ -17,7 +17,7 @@ jobs:
     - name: Login to Yandex Container Registry
       uses: yc-actions/yc-cr-login@v2
       with:
-        yc-sa-json-key: ${{ secrets.YC_SA_JSON_KEY }}
+        yc-sa-json-credentials: ${{ secrets.YC_SA_JSON_KEY }}
 
     - name: Build and push Docker image
       run: |
